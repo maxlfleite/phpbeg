@@ -1,0 +1,34 @@
+Para mostrar o var_dump de maneira mais digerível:
+
+echo "<pre>";
+var_dump($_SERVER);
+echo "</pre>";
+
+die();
+
+A função die() mata a execução da página, mostrando apenas o var_dump em sequencia; não mostrando nada após a execução da função.
+Este pedaço de código será muito utlizado para inspecionar alguma variável. O professor falou que iremos utilizar o tempo inteiro.
+Para inspecionar qual é a página atual, basta olhar a key [REQUEST_URI].
+
+------------------------------------------------------
+Introduction to PDO (or Orientation to Object)
+class Person
+{
+    public $name;
+    public $age;
+
+    public function breathe()
+    {
+        echo $this->name . ' is breathing!';
+    }
+}
+
+$person = new Person();
+
+$person->name = 'John Doe';
+$person->age = 25;
+
+$person -> breathe();
+
+/Detalhe bacana: funções são os verbos da programação/
+------------------------------------------------------
