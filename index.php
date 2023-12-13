@@ -1,21 +1,16 @@
 <?php 
 
-require ('functions.php');
+require_once ('functions.php');
+require_once 'Database.php';
 
 //require "router.php";
 
 // connect to our MySQL database.
-$dsn = "mysql:host=localhost;port=3306;dbname=phpbeg;user=root;charset=utf8mb4";
+// Connect to database and execute a query.
 
-$pdo = new PDO($dsn);
 
-$statment = $pdo->prepare("select * from maxdatabase");
+$db = new Database();
+$posts = $db->query("select * from phpforbeg")-> fetchAll(PDO::FETCH_ASSOC);
 
-$statment->execute();
-
-$posts = $statment->fetchAll(PDO::FETCH_ASSOC);
-
-foreach ($posts as $post) {
-    echo "<li>".$post['Title']."</li>";
-}
+dd($posts);
 ?>
