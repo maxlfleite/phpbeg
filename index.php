@@ -10,7 +10,7 @@ require_once 'Database.php';
 
 
 $db = new Database();
-$posts = $db->query("select * from phpforbeg")-> fetchAll(PDO::FETCH_ASSOC);
+$posts = $db->query("select * from teste")-> fetchAll(PDO::FETCH_ASSOC);
 
 dd($posts);
 ?>
