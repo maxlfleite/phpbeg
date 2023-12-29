@@ -1,28 +1,9 @@
 <?php 
 
-$uri = parse_url($_SERVER['REQUEST_URI'])['path'];
+$routes = require_once 'routes.php';
 
 //dd($_SERVER);
-/*
-This is the first lógic. The working refactored one is down bellow.
-if ($uri === '/phpbeg/') {
-    require ('controllers/index.php');
-}
-elseif ($uri === '/phpbeg/about') {
-    require ('controllers/about.php');
-}
-elseif ($uri === '/phpbeg/contact') {
-    require ('controllers/contact.php');
-}
-*/
 
-$routes = [
-    '/phpbeg/' => 'controllers/index.php',
-    '/phpbeg/about' => 'controllers/about.php',
-    '/phpbeg/notes' => 'controllers/notes.php',
-    '/phpbeg/note' => 'controllers/note.php',
-    '/phpbeg/contact' => 'controllers/contact.php'
-];
 
 function routeToController ($uri, $routes) {
     if (array_key_exists($uri, $routes)) {
@@ -39,6 +20,8 @@ function abort($code = 404) {
     die();
 
 }
+
+$uri = parse_url($_SERVER['REQUEST_URI'])['path'];
 
 routeToController ($uri, $routes);
 
