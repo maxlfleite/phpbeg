@@ -19,6 +19,8 @@ elseif ($uri === '/phpbeg/contact') {
 $routes = [
     '/phpbeg/' => 'controllers/index.php',
     '/phpbeg/about' => 'controllers/about.php',
+    '/phpbeg/notes' => 'controllers/notes.php',
+    '/phpbeg/note' => 'controllers/note.php',
     '/phpbeg/contact' => 'controllers/contact.php'
 ];
 

@@ -1,16 +1,11 @@
 <?php 
 
-require_once ('functions.php');
+require_once 'functions.php';
+
 require_once 'Database.php';
 
-//require "router.php";
+require_once 'Response.php';
 
-// connect to our MySQL database.
-// Connect to database and execute a query.
+require_once "router.php";
 
-
-$db = new Database();
-$posts = $db->query("select * from teste")-> fetchAll(PDO::FETCH_ASSOC);
-
-dd($posts);
 ?>
