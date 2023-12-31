@@ -15,9 +15,9 @@ elseif ($uri === '/phpbeg/contact') {
 return [
     '/phpbeg/' => 'controllers/index.php',
     '/phpbeg/about' => 'controllers/about.php',
-    '/phpbeg/notes' => 'controllers/notes.php',
-    '/phpbeg/note' => 'controllers/note.php',
-    '/phpbeg/notes/create' => 'controllers/note-create.php',
+    '/phpbeg/notes' => 'controllers/notes/index.php',
+    '/phpbeg/note' => 'controllers/notes/show.php',
+    '/phpbeg/notes/create' => 'controllers/notes/create.php',
     '/phpbeg/contact' => 'controllers/contact.php'
 ];
 
